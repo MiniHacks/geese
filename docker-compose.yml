@@ -8,6 +8,15 @@ services:
     ports:
       - "27017:27017"
 
+  python_backend:
+    build: "pyth"
+    environment:
+      - PORT=8000
+    expose:
+      - 8000
+    ports:
+      - "8000:8000"
+
 volumes:
   mongodata:
     external: true
