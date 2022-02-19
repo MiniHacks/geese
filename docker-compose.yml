@@ -51,6 +51,15 @@ services:
 #    environment:
 #      - "PORT=3002"
 #
+  python_backend:
+    build: "pyth"
+    environment:
+      - PORT=8000
+    expose:
+      - 8000
+    ports:
+      - "8000:8000"
+
 volumes:
   mongodata:
   caddy_data:
