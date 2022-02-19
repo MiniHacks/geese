@@ -52,7 +52,7 @@ services:
 #      - "PORT=3002"
 #
   python_backend:
-    build: "pyth"
+    build: "python"
     environment:
       - PORT=8000
     expose:
