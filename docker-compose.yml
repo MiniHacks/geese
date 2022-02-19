@@ -1,13 +1,60 @@
 version: "3"
 services:
-  db:
+  caddy:
+    container_name: caddy
+    image: caddy:2.4.6
+    restart: unless-stopped
+#    network_mode: "host"
+    ports:
+      - "3000:80"
+      - "3001:443"
+    volumes:
+      - $PWD/infra/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/shared:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - internal
+  mongodb:
     image: mongo
-    container_name: db_mongo
+    container_name: mongodb
     volumes:
       - mongodata:/data/db
     ports:
       - "27017:27017"
-
+    networks:
+      - internal
+  nextjs:
+    container_name: nextjs
+    depends_on:
+      - mongodb
+    #    network_mode: "host"
+#    ports:
+#      - "3000:3000"
+    build: nextjs
+    volumes:
+      - "./shared:/shared"
+    env_file:
+      - .env
+    networks:
+      - internal
+#  express:
+#    ports:
+#      - "3001:3001"
+#    build: express
+#    environment:
+#      - "PORT=3001"
+#  pyth:
+#    build: python
+#    ports:
+#      - "3002:3002"
+#    environment:
+#      - "PORT=3002"
+#
 volumes:
   mongodata:
-    external: true
+  caddy_data:
+  caddy_config:
+networks:
+  internal:
+    name: "geese-internals"
