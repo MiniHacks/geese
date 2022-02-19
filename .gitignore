@@ -48,3 +48,8 @@ yarn-error.log*
 !**/.yarn/plugins
 !**/.yarn/sdks
 !**/.yarn/versions
+
+# python
+venv
+*.pyc
+__pycache__
