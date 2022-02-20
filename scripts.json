@@ -1,0 +1,18 @@
+{
+  "mongodb": {
+    "command": "docker-compose up mongodb",
+    "color": "green"
+  },
+  "nextjs": {
+    "path": "nextjs/",
+    "command": "yarn dev",
+    "install": "yarn",
+    "color": "aqua"
+  },
+  "express": {
+    "path": "express/",
+    "command": "yarn dev",
+    "install": "yarn",
+    "color": "purple"
+  }
+}
