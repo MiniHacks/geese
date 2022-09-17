@@ -1,0 +1,11 @@
+:8888
+
+handle_path {$IO_PATH}* {
+    reverse_proxy 127.0.0.1:{$IO_PORT}
+}
+
+handle_path {$BACKEND_PATH}* {
+    reverse_proxy 127.0.0.1:{$BACKEND_PORT}
+}
+
+reverse_proxy 127.0.0.1:{$PORT}

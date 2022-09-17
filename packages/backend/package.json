@@ -1,0 +1,13 @@
+{
+  "name": "backend",
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "dev": "nodemon ../",
+    "prepare": "pip3 install -r requirements.txt --no-input",
+    "build": "pip3 install -r requirements.txt --no-input",
+    "start": "nodemon ../"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

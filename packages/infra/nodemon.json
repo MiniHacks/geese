@@ -1,0 +1,6 @@
+{
+  "restartable": "rs",
+  "quiet": true,
+  "exec": "caddy reload",
+  "watch": ["Caddyfile"]
+}

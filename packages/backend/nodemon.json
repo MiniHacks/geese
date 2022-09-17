@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "quiet": true,
+  "exec": "cd ..; python3.9 -m backend",
+  "env": {
+    "PYTHON_ENV": "development"
+  },
+  "watch": ["*.py"],
+  "ext": "py"
+}
