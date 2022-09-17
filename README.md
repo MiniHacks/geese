@@ -2,7 +2,7 @@
 
 This is a boilerplate that we often use for our hackathons. Feel free to use this however you wish!
 
-Please make any PRs for anything you would like to add. 
+No need to credit us if you use this for your own projects, but please make any PRs for any improvements :P
 
 Run this with the [GitHub CLI](https://cli.github.com/) and [Docker Compose](https://docs.docker.com/compose/):
 ```bash
