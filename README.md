@@ -1,6 +1,8 @@
 # Geese: The Hackathon In A Box
 
-This is a boilerplate that we often use for our hackathons. Feel free to use this however you wish!
+This is a boilerplate that we often use for our hackathons. Feel free to use this however you wish! 
+
+It has no functionality, just allows us to get up and running to work on the actually interesting bits.
 
 No need to credit us if you use this for your own projects, but please make any PRs for any improvements :P
 
