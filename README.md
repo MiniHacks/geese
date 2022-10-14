@@ -10,8 +10,12 @@ Run this with the [GitHub CLI](https://cli.github.com/) and [Docker Compose](htt
 ```bash
 gh repo create -p https://github.com/minihacks/geese --clone --public [name] 
 
-# after cloning, start the local server
-docker-compose up -d
+# after cloning, make sure you have dependencies installed
+cp .env.example .env
+yarn install
+
+# then, run the project:
+yarn dev
 ```
 <details>
 <summary>If you have a team</summary>
@@ -27,20 +31,19 @@ gh repo edit --visibility public
 ```
 </details>
 
+
+
 ## Parts
 - Infrastructure
   - [x] Replace NGINX with Caddy
   - [x] Shared Directory
-  - [ ] dev.js
+  - [x] Yarn workspaces
 - Frontend
   - [X] Latest NextJS Version
-  - [ ] Storybook
-  - [ ] Component Library
   - [x] NextAuth
-  - [ ] ThreeJS
 - Backend 
   - [X] SocketIO
 - Python
-  - [ ] Flask
+  - [x] FastAPI
 - MongoDB
   - [ ] MongoDB
