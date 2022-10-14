@@ -6,7 +6,9 @@ It has no functionality, just allows us to get up and running to work on the act
 
 No need to credit us if you use this for your own projects, but please make any PRs for any improvements :P
 
-Run this with the [GitHub CLI](https://cli.github.com/) and [Docker Compose](https://docs.docker.com/compose/):
+Run this with the [GitHub CLI](https://cli.github.com/) and [Caddy](https://caddyserver.com/):
+
+```bash
 ```bash
 gh repo create -p https://github.com/minihacks/geese --clone --public [name] 
 
