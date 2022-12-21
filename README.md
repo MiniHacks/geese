@@ -9,7 +9,7 @@ No need to credit us if you use this for your own projects, but please make any 
 Run this with the [GitHub CLI](https://cli.github.com/) and [Caddy](https://caddyserver.com/):
 
 ```bash
-```bash
+
 gh repo create -p https://github.com/minihacks/geese --clone --public [name] 
 
 # after cloning, make sure you have dependencies installed
