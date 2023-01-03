@@ -1,0 +1,7 @@
+{
+  "name": "chrome",
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "@types/chrome": "^0.0.216"
+  }
+}
