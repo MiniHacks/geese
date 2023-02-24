@@ -4,15 +4,26 @@
   "workspaces": [
     "packages/*"
   ],
+  "private": true,
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "scripts": {
     "prepare": "yarn install; yarn workspaces foreach run prepare",
     "dev": "yarn env-cmd yarn workspaces foreach -pi run dev",
     "build": "yarn env-cmd yarn workspaces foreach -pi run build",
-    "start": "yarn env-cmd yarn workspaces foreach -pi run start"
+    "start": "yarn env-cmd yarn workspaces foreach -pi run start",
+    "postinstall": "husky install",
+    "test": "echo \"tests completed\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
+    "commitlint-plugin-function-rules": "^1.7.1",
     "env-cmd": "^10.1.0",
     "eslint": "^8.9.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -25,6 +36,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.5.1"
   }
