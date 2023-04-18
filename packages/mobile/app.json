@@ -5,7 +5,13 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.minihacks.geese"
+    },
+    "ios": {
+      "bundleIdentifier": "com.minihacks.geese"
+    }
   },
   "name": "mobile"
 }

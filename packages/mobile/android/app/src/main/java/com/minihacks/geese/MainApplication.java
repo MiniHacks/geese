@@ -1,4 +1,4 @@
-package com.mobile;
+package com.minihacks.geese;
 
 import android.app.Application;
 import android.content.res.Configuration;
